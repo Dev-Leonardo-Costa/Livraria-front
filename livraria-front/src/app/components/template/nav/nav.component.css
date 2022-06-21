@@ -1,0 +1,20 @@
+.container{
+    height: 87%;
+    background-color: #29292a;
+}
+
+i{
+    padding-right: .6rem;
+}
+
+.mat-drawer{
+    background-color:#424144;
+}
+
+.mat-list-base .mat-list-item {
+    color: #fafafa;
+}
+
+.mat-drawer-container {
+    color: white;
+}
