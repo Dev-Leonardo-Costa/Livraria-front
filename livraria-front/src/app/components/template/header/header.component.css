@@ -1,5 +1,5 @@
 .header{
-    justify-content: center;
+    justify-content: left;
     height: 10%;
     background-color: rgb(32, 31, 32);
 }
@@ -10,7 +10,7 @@
 }
 
 img{
-    height: 4rem;
+    height: 2.8rem;
 }
 
 span{

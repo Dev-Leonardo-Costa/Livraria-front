@@ -10,10 +10,42 @@
 
 .title h1{
     font-size: 2rem;
-    color:coral;
+    color: #F44336;
     font-weight: 500;
+}
+
+.button{
+    margin-bottom: .7rem;
 }
 
 .table{
     width: 100%;
+    background: #424144;
+}
+
+.edit{
+    color:rgb(255, 232, 80);
+   
+}
+
+.delete{
+    color:rgb(222, 54, 54);
+    margin-left: .5rem;
+}
+
+.mat-header-cell {
+    color: white;
+}
+
+.mat-cell, .mat-footer-cell {
+    color: white;
+}
+
+.mat-header{
+    width: 5rem;
+}
+
+.livros{
+    color: rgb(0, 136, 255);
+    margin-left: .5rem;
 }
