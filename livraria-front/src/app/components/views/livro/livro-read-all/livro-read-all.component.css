@@ -1,0 +1,51 @@
+.content{
+    width: 90%;
+    margin: 1.4rem auto auto auto;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title h2{
+    font-size: 2rem;
+    color: #424144;
+    font-weight: 500;
+}
+
+.button{
+    margin-bottom: .7rem;
+}
+
+.table{
+    width: 100%;
+    background: #424144;
+}
+
+.edit{
+    color:rgb(255, 232, 80);
+   
+}
+
+.delete{
+    color:rgb(222, 54, 54);
+    margin-left: .5rem;
+}
+
+.mat-header-cell {
+    color: white;
+}
+
+.mat-cell, .mat-footer-cell {
+    color: white;
+}
+
+.mat-header{
+    width: 5rem;
+}
+
+.livros{
+    color: rgb(0, 136, 255);
+    margin-left: .5rem;
+}
