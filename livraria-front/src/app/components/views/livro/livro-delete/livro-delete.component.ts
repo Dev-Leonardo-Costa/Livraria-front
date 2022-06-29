@@ -1,15 +1,55 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+import { Livro } from "../livro.model";
+import { LivroService } from "../livro.service";
 
 @Component({
-  selector: 'app-livro-delete',
-  templateUrl: './livro-delete.component.html',
-  styleUrls: ['./livro-delete.component.css']
+  selector: "app-livro-delete",
+  templateUrl: "./livro-delete.component.html",
+  styleUrls: ["./livro-delete.component.css"],
 })
 export class LivroDeleteComponent implements OnInit {
+  
+  id_cat: String = "";
 
-  constructor() { }
+  livro: Livro = {
+    id: "",
+    titulo: "",
+    nome_autor: "",
+    texto: "",
+  };
+
+  constructor(
+    private service: LivroService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
+    this.id_cat = this.route.snapshot.paramMap.get("id_cat")!;
+    this.livro.id = this.route.snapshot.paramMap.get("id")!;
+    this.buscaPorId();
   }
 
+  buscaPorId(): void {
+    this.service.buscarPorId(this.livro.id!).subscribe((resposta) => {
+      this.livro = resposta;
+    });
+  }
+
+  remover(): void {
+    this.service.remover(this.livro.id!).subscribe(
+      () => {
+        this.router.navigate([`categorias/${this.id_cat}/livros`]);
+        this.service.mensagem("Livro removido com sucesso!");
+      },
+      (err) => {
+        this.router.navigate([`categorias/${this.id_cat}/livros`]);
+        this.service.mensagem("Falha ao remover livro! Tente mais tarde..");      }
+    );
+  }
+
+  cancelar(): void {
+    this.router.navigate([`categorias/${this.id_cat}/livros`]);
+  }
 }

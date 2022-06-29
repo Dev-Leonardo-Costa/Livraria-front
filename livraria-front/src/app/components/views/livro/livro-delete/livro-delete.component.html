@@ -1,1 +1,25 @@
-<p>livro-delete works!</p>
+<form>
+    <H2 class="mat-elevation-z17">DELETANDO LIVRO</H2>
+
+    <mat-form-field class="form">
+        <mat-label>Titulo</mat-label>
+        <input matInput [(ngModel)]="livro.titulo" type="text" name="titulo" disabled >
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Nome do autor</mat-label>
+        <input matInput [(ngModel)]="livro.nome_autor" type="text" name="nome do autor" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Texto</mat-label>
+        <textarea matInput [(ngModel)]="livro.texto" type="text" name="texto" disabled></textarea>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="remover()" class="mat-elevation-z8" mat-raised-button color="primary">Remover</button>
+        <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
+    </div>
+
+</form>
+
