@@ -1,14 +1,20 @@
 form{
     text-align: center;
-    width: 70%;
+    width: 80%;
     margin: 2rem auto 0 auto;
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+    font-family: arial, sans-serif;
 }
 
 h2{
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 3rem;
-    color: #424144;
+    color: #656D78;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: arial, sans-serif;
+    background-color: #B4DD7F;
 }
 
 .form{
@@ -21,6 +27,7 @@ h2{
 }
 
 button{
+    margin-top: 1.8rem;
     margin-right: .5rem;
     padding-right: 2rem;
     padding-left: 2rem;

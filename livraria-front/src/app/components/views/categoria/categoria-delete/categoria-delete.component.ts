@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from "@angular/router";
   templateUrl: "./categoria-delete.component.html",
   styleUrls: ["./categoria-delete.component.css"],
 })
+
 export class CategoriaDeleteComponent implements OnInit {
   categoria: Categoria = {
     id: "",

@@ -6,12 +6,15 @@
 .title{
     text-align: center;
     margin-bottom: 3rem;
+    background-color: #B4DD7F;
 }
 
 .title h2{
-    font-size: 2rem;
-    color: #424144;
-    font-weight: 500;
+    color: #656D78;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: arial, sans-serif;
 }
 
 .button{
@@ -24,7 +27,7 @@
 }
 
 .edit{
-    color:rgb(24, 119, 213);
+    color:#B4DD7F;
    
 }
 
@@ -46,6 +49,6 @@
 }
 
 .livros{
-    color: Gold;
+    color:#CF9E76;
     margin-left: .5rem;
 }

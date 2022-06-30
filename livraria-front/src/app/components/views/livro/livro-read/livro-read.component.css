@@ -1,0 +1,18 @@
+form{
+    width: 90%;
+    margin: auto;
+}
+
+button{
+    width: 100%;
+}
+
+.home{
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.mat-card {
+    background: #dfd1b3;
+    color: #a85919;
+}

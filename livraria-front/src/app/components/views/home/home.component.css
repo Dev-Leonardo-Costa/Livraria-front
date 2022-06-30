@@ -1,6 +1,24 @@
 .home {
     width: 95%;
-    margin: 1rem auto;
+    margin: 3rem auto;
+    text-align: center;
+    background-color: #B4DD7F;
+}
+
+.title{
+    color: #656D78;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 33px;
+    font-family: arial, sans-serif;
+}
+
+.subtitle{
+    color: #656D78; 
+    font-style: italic;
+    font-weight: bold;
+    font-size: px;
+    font-family: arial, sans-serif;
 }
 
 @media(max-width: 450px){

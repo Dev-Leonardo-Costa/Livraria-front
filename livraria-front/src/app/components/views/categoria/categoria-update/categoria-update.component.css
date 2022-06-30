@@ -1,20 +1,25 @@
 form{
     text-align: center;
     width: 70%;
-    margin: 2rem auto 0 auto;
-    color: blue;
+    margin: 5rem auto 0 auto;
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+    font-family: arial, sans-serif;
+    font-size: 20px;
 }
 
 h2{
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 3rem;
-    color: #424144;
+    color: #656D78;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: arial, sans-serif;
+    background-color: #B4DD7F;
 }
 
 .form{
     width: 100%;
-    color: #3F51B5;
 }
 
 .buttons{
