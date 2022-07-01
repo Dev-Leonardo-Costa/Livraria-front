@@ -17,10 +17,6 @@ h2{
     background-color: #B4DD7F;
 }
 
-.form{
-    width: 100%;
-}
-
 .buttons{
     width: 100%;
     text-align: start;
@@ -31,4 +27,20 @@ button{
     margin-right: .5rem;
     padding-right: 2rem;
     padding-left: 2rem;
+}
+
+.example-input-wrapper{
+    margin-top: 2rem;
+    color: #656D78;
+}
+
+.mat-form-field {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 50%;
+}
+
+.buttonf{
+    width: 100%;
 }

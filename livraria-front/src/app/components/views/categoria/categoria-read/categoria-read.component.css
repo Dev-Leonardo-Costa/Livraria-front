@@ -23,7 +23,7 @@
 
 .table{
     width: 100%;
-    background: #424144;
+    background: white;
 }
 
 .edit{
@@ -33,15 +33,17 @@
 
 .delete{
     color:rgb(222, 54, 54);
-    margin-left: .5rem;
+    margin-left: .3rem;
 }
 
 .mat-header-cell {
-    color: white;
+    color: rgb(0, 0, 0);
+	font-size: 15px;
+    font-weight:bold;
 }
 
 .mat-cell, .mat-footer-cell {
-    color: white;
+    color: rgb(60, 60, 60);
 }
 
 .mat-header{
@@ -50,5 +52,9 @@
 
 .livros{
     color:#CF9E76;
-    margin-left: .5rem;
+    margin-left: .7rem;
+}
+
+.span{
+    margin-left: .1rem;
 }

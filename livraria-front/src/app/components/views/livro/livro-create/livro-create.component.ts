@@ -10,6 +10,10 @@ import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms"
   styleUrls: ["./livro-create.component.css"],
 })
 export class LivroCreateComponent implements OnInit {
+
+  firstFormGroup: FormGroup = this._formBuilder.group({firstCtrl: ['']});
+  secondFormGroup: FormGroup = this._formBuilder.group({secondCtrl: ['']});
+
   id_cat: String = "";
 
   livro: Livro = {
@@ -27,6 +31,7 @@ export class LivroCreateComponent implements OnInit {
     private service: LivroService,
     private route: ActivatedRoute,
     private router: Router,
+    private _formBuilder: FormBuilder,
   ) {}
 
   ngOnInit(): void {

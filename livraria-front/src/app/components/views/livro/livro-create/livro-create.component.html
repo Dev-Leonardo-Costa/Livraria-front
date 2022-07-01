@@ -1,31 +1,56 @@
 <form>
-    <H2 class="mat-elevation-z17">CRIANDO NOVO LIVRO</H2>
-
-    <mat-form-field class="form">
-        <mat-label>Titulo</mat-label>
-        <input matInput [(ngModel)]="livro.titulo" [formControl]="titulo" required type="text" name="titulo" placeholder="Ex. Spring boot com Angular 10" maxlength="100">
-        <mat-error *ngIf="titulo.invalid">{{ getMessage() }}</mat-error>
-    </mat-form-field>
-
-    <mat-form-field class="form">
-        <mat-label>Nome do autor</mat-label>
-        <input matInput [(ngModel)]="livro.nome_autor" [formControl]="nome_autor" required type="text" name="nome_autor" placeholder="Ex. Leonardo Costa" maxlength="100">
-        <mat-error *ngIf="nome_autor.invalid">{{ getMessage() }}</mat-error>
-    </mat-form-field>
-
-    <mat-form-field class="form">
-        <mat-label>Texto</mat-label>
-        <textarea matInput [(ngModel)]="livro.texto" [formControl]="texto" required type="text" name="texto" placeholder="Ex. Lorem ipsum" maxlength="2000000"></textarea>
-        <mat-error *ngIf="texto.invalid">{{ getMessage() }}</mat-error>
-    </mat-form-field>
-
-    <div class="buttons">
-        <button (click)="salvar()" [disabled]="getMessage()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
-        <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
-    </div>
-
+    <H2 class="mat-elevation-z17">NOVO LIVRO</H2>
+          <mat-vertical-stepper [linear]="false" #stepper [animationDuration]="duration.value">
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                  <ng-template matStepLabel>Preencha o titulo do livro</ng-template>
+                  <mat-form-field>
+                    <input matInput [(ngModel)]="livro.titulo" [formControl]="titulo" required type="text" name="titulo" placeholder="Ex. Leonardo Costa" maxlength="100">
+                    <mat-error *ngIf="titulo.invalid">{{ getMessage() }}</mat-error>
+                  </mat-form-field>
+                  <div class="example-label">
+                    <button mat-button matStepperNext>Próximo</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                  <ng-template matStepLabel>Preencha o nome do autor</ng-template>
+                  <mat-form-field>
+                    <input matInput [(ngModel)]="livro.nome_autor" [formControl]="nome_autor" required type="text" name="nome_autor" placeholder="Ex. Uma sociedade ou um mundo inventado  " maxlength="100">
+                    <mat-error *ngIf="nome_autor.invalid">{{ getMessage() }}</mat-error>
+                  </mat-form-field>
+                  <div class="example-label">
+                    <button mat-button matStepperNext>Próximo</button>
+                    <button mat-button matStepperPrevious>Voltar</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup">
+                  <ng-template matStepLabel>Preencha o texto do livro</ng-template>
+                  <mat-form-field>
+                    <textarea matInput [(ngModel)]="livro.texto" [formControl]="texto" required type="text" name="texto" placeholder="Ex. Lorem ipsum" maxlength="100"></textarea>
+                    <mat-error *ngIf="texto.invalid">{{ getMessage() }}</mat-error>
+                  </mat-form-field>
+                  <div class="example-label">
+                    <button mat-button matStepperNext>Próximo</button>
+                    <button mat-button matStepperPrevious>Voltar</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step>
+                <ng-template matStepLabel>Salvar categoria</ng-template>
+                  <div class="example-label">
+                      <button (click)="salvar()" [disabled]="getMessage()" mat-button color="primary" mat-button matStepperNext>Salvar</button>
+                      <button mat-button  matStepperPrevious>Voltar</button>
+                  </div>
+              </mat-step>
+              <div class="example-input-wrapper">
+                <label for="duration" style="color: #3F51B5;">Velocidade da animação </label>
+                <input id="duration" value="1300" type="number" min="0" step="100" #duration>
+              </div>
+            </mat-vertical-stepper>
+            <button class="buttonf" (click)="cancelar()" mat-button color="warn">Cancelar</button>
+      </form>
    
-      
-</form>
-
-

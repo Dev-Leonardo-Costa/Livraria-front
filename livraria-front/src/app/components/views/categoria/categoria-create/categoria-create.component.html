@@ -1,16 +1,15 @@
 <form>
-    <H2 class="mat-elevation-z17">CRIANDO NOVA CATEGORIA</H2>
-
+  <H2 class="mat-elevation-z17">NOVA CATEGORIA</H2>
     <mat-vertical-stepper [linear]="false" #stepper [animationDuration]="duration.value">
-        <mat-step [stepControl]="firstFormGroup">
+      <mat-step [stepControl]="firstFormGroup">
           <form [formGroup]="firstFormGroup">
             <ng-template matStepLabel>Preencha o nome da categoria</ng-template>
             <mat-form-field>
-                <input matInput [(ngModel)] ="categoria.nome" [formControl]="nome" required type="text" name="nome" placeholder="Ex. Computação">
+                <input class="input" matInput [(ngModel)] ="categoria.nome" [formControl]="nome" required type="text" name="nome" placeholder="Ex. Computação">
                 <mat-error *ngIf="nome.invalid">{{ getMessage() }}</mat-error>
             </mat-form-field>
-            <div>
-              <button class="mat-elevation-z8" mat-stroked-button color="accent" mat-button matStepperNext>Next</button>
+            <div class="example-label">
+              <button mat-button matStepperNext>Próximo</button>
             </div>
           </form>
         </mat-step>
@@ -21,24 +20,23 @@
                 <textarea matInput [(ngModel)]="categoria.descricao" [formControl]="descricao" required type="text" name="descricao" placeholder="Ex. Livros de Computação"></textarea>
                 <mat-error *ngIf="descricao.invalid">{{ getMessage() }}</mat-error>
             </mat-form-field>
-            <div class="button">
-              <button mat-button matStepperPrevious>Voltar</button>
+            <div class="example-label">
               <button mat-button matStepperNext>Próximo</button>
+              <button mat-button matStepperPrevious>Voltar</button>
             </div>
           </form>
         </mat-step>
         <mat-step>
           <ng-template matStepLabel>Salvar categoria</ng-template>
-            <div class="button">
-                <button (click)="salvar()" [disabled]="getMessage()" class="mat-elevation-z8" mat-raised-button color="primary" mat-button matStepperNext>Next</button>
-                <button mat-raised-button color="accent" matStepperPrevious>Voltar</button>
-                <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
+            <div class="example-label">
+                <button (click)="salvar()" [disabled]="getMessage()" mat-button color="primary" mat-button matStepperNext>Salvar</button>
+                <button mat-button  matStepperPrevious>Voltar</button>
             </div>
         </mat-step>
+        <div class="example-input-wrapper">
+          <label for="duration" style="color: #3F51B5;">Velocidade da animação</label>
+          <input id="duration" value="1300" type="number" min="0" step="100" #duration>
+        </div>
       </mat-vertical-stepper>
-     
-      <div class="example-input-wrapper">
-        <label for="duration">Velocidade da animação</label>
-        <input id="duration" value="2000" type="number" min="0" step="100" #duration>
-      </div>
+      <button class="buttonf" (click)="cancelar()" mat-button color="warn">Cancelar</button>
 </form>
