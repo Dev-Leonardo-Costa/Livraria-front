@@ -6,6 +6,7 @@
 .title{
     text-align: center;
     margin-bottom: 3rem;
+    background-color: #B4DD7F;
 }
 
 .title h2{
@@ -14,7 +15,6 @@
     font-weight: bold;
     font-size: 30px;
     font-family: arial, sans-serif;
-    background-color: #B4DD7F;
 }
 
 .button{
@@ -23,25 +23,27 @@
 
 .table{
     width: 100%;
-    background: #424144;
+    background: white;
 }
 
 .edit{
-    color:rgb(24, 119, 213);
+    color:#B4DD7F;
    
 }
 
 .delete{
     color:rgb(222, 54, 54);
-    margin-left: .5rem;
+    margin-left: .3rem;
 }
 
 .mat-header-cell {
-    color: white;
+    color: rgb(0, 0, 0);
+	font-size: 15px;
+    font-weight:bold;
 }
 
 .mat-cell, .mat-footer-cell {
-    color: white;
+    color: rgb(60, 60, 60);
 }
 
 .mat-header{
@@ -49,6 +51,10 @@
 }
 
 .livros{
-    color: rgb(24, 119, 213);
-    margin-left: .5rem;
+    color:#CF9E76;
+    margin-left: 1.3rem;
+}
+
+.span{
+    margin-left: .1rem;
 }
