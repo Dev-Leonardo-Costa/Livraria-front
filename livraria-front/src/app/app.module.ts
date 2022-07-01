@@ -30,6 +30,8 @@ import { LivroUpdateComponent } from './components/views/livro/livro-update/livr
 import { LivroDeleteComponent } from './components/views/livro/livro-delete/livro-delete.component';
 import { LivroReadComponent } from './components/views/livro/livro-read/livro-read.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatSortModule} from '@angular/material/sort';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatFormFieldModule,
     MatInputModule,
     MatSnackBarModule,
-    MatStepperModule
+    MatStepperModule,
+    MatSortModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],

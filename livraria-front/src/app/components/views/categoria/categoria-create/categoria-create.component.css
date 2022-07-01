@@ -1,7 +1,7 @@
 form{
     text-align: center;
     width: 80%;
-    margin: 2rem auto 0 auto;
+    margin: 4rem auto 0 auto;
     color: #000000;
     font-style: italic;
     font-weight: bold;
@@ -29,15 +29,7 @@ button{
     padding-left: 2rem;
 }
 
-.example-input-wrapper{
-    margin-top: 2rem;
-    color: #656D78;
-}
-
 .mat-form-field {
-    display: inline-block;
-    position: relative;
-    text-align: left;
     width: 50%;
 }
 

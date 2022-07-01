@@ -40,7 +40,7 @@ export class LivroService {
 
   mensagem(mensagemErro: String): void {
     this._snack.open(`${mensagemErro}`, "OK", {
-      horizontalPosition: "end",
+      horizontalPosition: "left",
       verticalPosition: "top",
       duration: 3000,
     });
