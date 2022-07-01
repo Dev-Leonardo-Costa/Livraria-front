@@ -5,7 +5,7 @@
                 <form [formGroup]="firstFormGroup">
                   <ng-template matStepLabel>Preencha o titulo do livro</ng-template>
                   <mat-form-field>
-                    <input matInput [(ngModel)]="livro.titulo" [formControl]="titulo" required type="text" name="titulo" placeholder="Ex. Leonardo Costa" maxlength="100">
+                    <input matInput [(ngModel)]="livro.titulo" [formControl]="titulo" required type="text" name="titulo" placeholder="Ex. Clean Code" maxlength="100">
                     <mat-error *ngIf="titulo.invalid">{{ getMessage() }}</mat-error>
                   </mat-form-field>
                   <div class="example-label">
@@ -17,7 +17,7 @@
                 <form [formGroup]="firstFormGroup">
                   <ng-template matStepLabel>Preencha o nome do autor</ng-template>
                   <mat-form-field>
-                    <input matInput [(ngModel)]="livro.nome_autor" [formControl]="nome_autor" required type="text" name="nome_autor" placeholder="Ex. Uma sociedade ou um mundo inventado  " maxlength="100">
+                    <input matInput [(ngModel)]="livro.nome_autor" [formControl]="nome_autor" required type="text" name="nome_autor" placeholder="Ex. Matheus SC " maxlength="100">
                     <mat-error *ngIf="nome_autor.invalid">{{ getMessage() }}</mat-error>
                   </mat-form-field>
                   <div class="example-label">
