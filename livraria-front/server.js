@@ -1,8 +1,8 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const path = require('path');
 const app = express();
 
-const appName = "Livraria-front";
+const appName = 'Livraria-front';
 
 app.use(express.static( __dirname + `/dist/${appName}`))
 
