@@ -1,2 +1,2 @@
-# Livraria-front
+# Livraria
 front da nossa aplicação 
