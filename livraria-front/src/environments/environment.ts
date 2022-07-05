@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://v1-app-livraria.herokuapp.com/'
+  baseUrl: 'https://v1-app-livraria.herokuapp.com'
 };
 
 /*
