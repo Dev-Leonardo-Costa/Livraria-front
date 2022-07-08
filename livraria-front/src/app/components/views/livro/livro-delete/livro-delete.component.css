@@ -1,13 +1,14 @@
 form{
     width: 80%;
-    height: 70%;
+    height: 90%;
     text-align: center;
-    margin: 4rem auto 0 auto;
+    margin: 1rem auto 0 auto;
     color: #000000;
     font-style: italic;
     font-weight: bold;
     font-family: arial, sans-serif;
     background-color: white;
+    border-radius: 30px 30px 5px 5px;
 }
 
 h2{
@@ -17,11 +18,11 @@ h2{
     font-size: 30px;
     font-family: arial, sans-serif;
     background-color: #B4DD7F;
+    border-radius: 30px 30px 5px 5px;
 }
 
 .form{
     width: 60%;
-    text-align: center;
     font-size: 24px;
     color: #000000;
     margin: 2rem auto 0 auto;
@@ -31,5 +32,15 @@ button{
     margin-right: .5rem;
     padding-right: 2rem;
     padding-left: 2rem;
-    margin-top: 3rem;
+    margin-top: 0.3rem;
 }
+
+.mat-button.mat-blue {
+    color: red;
+ }
+ 
+ .mat-raised-button.mat-blue, .mat-flat-button.mat-blue{
+    background-color: blue;
+    color: white;
+ }
+
